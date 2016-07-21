@@ -1,0 +1,958 @@
+/* ---------------> CSS STYLING SHEET <----------------- */
+body {
+  margin: 0;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+p {font-family: Helvetica, sans-serif;}
+a,
+address,
+#copyright {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Geneva, sans-serif;
+    text-transform: uppercase;
+}
+a {text-decoration: none;}
+address {font-style: normal;}
+.btn {
+  text-transform: uppercase;
+  margin-top: 9%;
+}
+.textblock {
+  overflow: auto;
+  padding-bottom: 1%;
+}
+
+/* ---------------> BACKGROUNDS <----------------- */
+#background-index {background-image: url("images/index.jpg");}
+#background-data-science {background-image: url(images/data-science.jpg);}
+#background-data-visualisatie {background-image: url(images/data-visualisatie.jpg);}
+#background-data-analyse {background-image: url(images/data-science.jpg);}
+#background-web-science {background-image: url(images/web-science.jpg);}
+#background-web-analyse {background-image: url(images/web-science.jpg);}
+#background-web-optimalisatie {background-image: url(images/web-science.jpg);}
+#background-over-ons {background-image: url(images/over-ons.jpg);}
+#background-contact {background-image: url(images/contact.jpg);}
+
+#background-index,
+#background-data-science,
+#background-data-visualisatie,
+#background-data-analyse,
+#background-web-science,
+#background-web-analyse, 
+#background-web-optimalisatie,
+#background-over-ons,
+#background-contact {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 8%;    
+  overflow: hidden;
+}
+@media screen and (min-width: 1800px) {
+  #background-data-science,
+  #background-data-visualisatie,
+  #background-data-analyse,
+  #background-web-science,
+  #background-web-analyse, 
+  #background-web-optimalisatie,
+  #background-contact {
+    height: 540px;  
+  }
+}
+
+/* ---------> NAVBAR STYLING <----------- */
+/* LOGO */
+#logo {
+  margin: 0.8em 2% 0.2em;
+  display: inline-block;
+}
+#logo-h1 {
+  margin: 0.4em 2% 0.1em;
+  display: inline-block;
+}
+#logo:hover{
+  opacity: 0.7;
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+/* GENERAL NAV */
+#bgnav {
+  background: rgb(255, 255, 255); /* Fallback */
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+#navbar {
+  position: relative;
+  margin: 0 2% 0 0;
+  padding: 0;
+  float: right;
+}
+#navbar li {display: none;}
+li#icon {
+  display: inline-block;
+  float: right;
+  padding: 0.3em 0.4em;
+  font-size: 1.7em;
+}
+#navbar li a {font-size: 1.4em;}
+li#icon:hover a,
+.dropdown-content a,
+.dropbtn:hover,
+.tab a:hover {
+  color: grey;
+}
+#icon a,
+.tab a,
+.dropbtn,
+.dropdown-content a:hover {
+  color: black;
+}
+.tab,
+.dropbtn {
+  text-transform: uppercase;
+}
+
+/* --> START RESPONSIVE NAV | MAX 768 <-- */
+@media screen and (max-width: 768px) {
+  #bgnav.responsive {
+    background: rgb(255, 255, 255); /* Fallback */
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+  #navbar.responsive {
+    float:none;
+    padding-top: 1.5em;
+    padding-bottom: 100%;
+    margin-right: 0%;
+  }
+  #navbar.responsive li {display: block;}     
+  #navbar.responsive li a {
+    display: block;
+    text-align: center;
+  }
+  #navbar.responsive .dropdown-content {
+    display: block;
+    line-height: 450%;
+    padding: 0%;
+    margin-top: -2%;
+  }
+  #navbar.responsive .dropbtn,
+  #navbar.responsive .tab a {
+    padding: 4%;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  #navbar.responsive #icon {
+    position: absolute;
+    top: -2.9em;
+    right: 2%;
+  }
+} /* END RESPONSIVE NAV */ 
+
+/* --> START NAVBAR STYLING | MIN 768 <-- */
+@media screen and (min-width: 768px) {
+  #navbar li {display: block;}
+  li#icon {display:none;}
+  #navbar li.dropdown, #navbar li.tab {float: left;}
+  #navbar li a {
+    display: inline-block;
+    padding: 1.2em 1.4em 1.2em 1em;
+  }
+  .tab {overflow: hidden;}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+  .dropdown:hover .dropbtn,
+  .tab a:hover,
+  .dropdown:hover .dropdown-content {
+    background: rgb(255, 255, 255); /* Fallback */
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 0em 0em 0.3em 0.3em;
+  }
+} /* END NAVBAR | MIN 768 */
+
+/* ---------> HERO STYLING <----------- */
+#hero-index {
+  background: rgb(2, 7, 25); /* Fallback */
+  background-color: rgba(2, 7, 25, 0.55);
+}
+#hero-data-science {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+#hero-data-visualisatie {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.80);
+}
+#hero-data-analyse {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+#hero-web-science {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+#hero-web-analyse {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+#hero-web-optimalisatie {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+#hero-over-ons {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+#hero-contact {
+  background: rgb(26, 26, 26); /* Fallback */
+  background-color: rgba(26, 26, 26, 0.30);
+}
+
+#hero-index,
+#hero-data-science,
+#hero-data-visualisatie,
+#hero-data-analyse,
+#hero-web-science,
+#hero-web-analyse,
+#hero-web-optimalisatie,
+#hero-over-ons,
+#hero-contact {
+  margin: 20% 9% 0% 9%;
+  padding: 5%;
+  text-align: center;
+  color: white;
+}
+#hero-index h2,
+#hero-data-science h1,
+#hero-data-visualisatie h1,
+#hero-data-analyse h1,
+#hero-web-science h1,
+#hero-web-analyse h1,
+#hero-web-optimalisatie h1,
+#hero-over-ons h1,
+#hero-contact h1 {
+  font-size: 2.6em;
+  margin-top: -3%;
+}
+#hero-text {
+  font-size: 1.4em;
+  line-height: 175%;
+}
+#hero-index a {
+  padding: 0.7em 5em;
+  font-size: 1.1em;
+  border: 0.2em solid;
+  color: white;
+}
+#hero-index a:hover {color: grey;}
+
+/* --> START HERO STYLING | MIN 600 <-- */
+@media screen and (min-width: 600px) {
+  #hero-index,
+  #hero-data-science,
+  #hero-data-visualisatie,
+  #hero-data-analyse,
+  #hero-web-science,
+  #hero-web-analyse,
+  #hero-web-optimalisatie,
+  #hero-over-ons,
+  #hero-contact {
+    margin: 15% 15% 0% 15%;
+  }
+  #hero-index h2,
+  #hero-data-science h1,
+  #hero-data-visualisatie h1,
+  #hero-data-analyse h1,
+  #hero-web-science h1,
+  #hero-web-analyse h1,
+  #hero-web-optimalisatie h1,
+  #hero-over-ons h1,
+  #hero-contact h1 {
+    font-size: 3em;
+  }
+  #hero-index a {
+    padding: 0.9em 3.6em;
+    font-size: 1.2em;
+  }
+  hero-text {font-size: 1.45em;}
+} /* END HERO | MIN 600 */
+
+/* --> START HERO STYLING | MIN 768 <-- */
+@media screen and (min-width: 768px) {
+  #hero-index,
+  #hero-data-science,
+  #hero-data-visualisatie,
+  #hero-data-analyse,
+  #hero-web-science,
+  #hero-web-analyse,
+  #hero-web-optimalisatie,
+  #hero-over-ons,
+  #hero-contact {
+    margin-top: 13%;
+  }
+  #hero-index h2,
+  #hero-data-science h1,
+  #hero-data-visualisatie h1,
+  #hero-data-analyse h1,
+  #hero-web-science h1,
+  #hero-web-analyse h1,
+  #hero-web-optimalisatie h1,
+  #hero-over-ons h1,
+  #hero-contact h1 {
+    font-size: 3.6em;
+  }
+} /* END HERO | MIN 768 */
+
+/* --> START HERO STYLING | MIN 992 <-- */
+@media screen and (min-width: 992px) {
+  #hero-index,
+  #hero-data-science,
+  #hero-data-visualisatie,
+  #hero-data-analyse,
+  #hero-web-science,
+  #hero-web-analyse,
+  #hero-web-optimalisatie,
+  #hero-over-ons,
+  #hero-contact {
+    margin: 12% 18% 0% 18%;
+  }
+  #hero-index h2,
+  #hero-data-science h1,
+  #hero-data-visualisatie h1,
+  #hero-data-analyse h1,
+  #hero-web-science h1,
+  #hero-web-analyse h1,
+  #hero-web-optimalisatie h1,
+  #hero-over-ons h1,
+  #hero-contact h1 {
+    font-size: 4.4em;
+  }
+  #hero-text {font-size: 1.5em;}
+  #hero-index a {font-size: 1.3em;}
+} /* END HERO | MIN 992 */
+
+/* --> START HERO STYLING | MIN 1200 <-- */
+@media screen and (min-width: 1200px) {
+  #hero-index,
+  #hero-data-science,
+  #hero-data-visualisatie,
+  #hero-data-analyse,
+  #hero-web-science,
+  #hero-web-analyse,
+  #hero-web-optimalisatie,
+  #hero-over-ons,
+  #hero-contact {
+    margin: 12% 22% 0% 22%;
+  }
+  #hero-index h2,
+  #hero-index h2,
+  #hero-data-science h1,
+  #hero-data-visualisatie h1,
+  #hero-data-analyse h1,
+  #hero-web-science h1,
+  #hero-web-analyse h1,
+  #hero-web-optimalisatie h1,
+  #hero-over-ons h1,
+  #hero-contact h1 {
+    font-size: 4.65em;
+  }
+  #hero-text {font-size: 1.55em;}
+} /* END HERO | MIN 1200 */
+
+/* ---------> REGULAR CONTENT STYLING <----------- */
+#main-content {text-align: center;}
+#main-content p {line-height: 150%;}
+#header-content,
+#over-ons-content {margin: 15% 8%;}
+#header-content h2 {font-size: 2em;}
+#header-content p {font-size: 1.4em;}
+#related-content {margin: 0% 6% 15%}
+#related-content .textblock {margin-bottom: 10%}
+#related-content h3 {font-size: 1.3em;}
+.textblock p:first-of-type {font-size: 1.3em;}
+#vector-analyse {
+  margin-top: -3%;
+  margin-bottom: -18px;
+}
+
+/* --> START REGULAR STYLING | MIN 600 <-- */
+@media screen and (min-width: 600px) {
+  #header-content,
+  #over-ons-content {
+    margin-top: 12%;
+    margin-bottom: 8%;
+  }
+  #related-content {margin: 0% 6% 12%}
+  #related-content .textblock {margin: 0% 10% 7%}
+  #header-content h2 {font-size: 2.2em;}
+  #related-content h3 {font-size: 1.4em;}
+} /* END REGULAR | MIN 600 */
+
+/* --> START REGULAR STYLING | MIN 768 <-- */
+@media screen and (min-width: 768px) {
+  #header-content,
+  #over-ons-content {
+    margin: 13% 10% 0%;
+  }
+  #header-content h2 {font-size: 2.8em;}
+  #related-content {
+    margin: 7% 2%;
+    overflow: hidden;
+  }
+  #related-content .textblock {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #vector-optimalisatie {margin-top: 4.4px;}
+  #vector-analyse {margin-top: -2%;}
+} /* END REGULAR | MIN 768 */
+
+/* --> START REGULAR STYLING | MIN 992 <-- */
+@media screen and (min-width: 992px) {
+  #header-content,
+  #over-ons-content {
+    margin: 10% 12% 0% 12%;
+  }
+  #header-content h2 {font-size: 3.2em;}
+  #header-content p {font-size: 1.5em;}
+  #related-content {margin-bottom: 6%;}
+  #related-content h3 {font-size: 1.5em;}
+  .textblock p:first-of-type {font-size: 1.35em;}
+} /* END REGULAR | MIN 768 */
+
+/* --> START REGULAR STYLING | MIN 1200 <-- */
+@media screen and (min-width: 1200px) {
+  #header-content,
+  #over-ons-content {
+    margin: 7% 18%;
+  }
+  #header-content h2 {font-size: 3.4em;}
+  #related-content {margin-bottom: 4%;}
+  #related-content .textblock {
+    text-align: left; 
+    margin-right: 7%;
+  }
+  .textblock p:first-of-type {font-size: 1.38em;}
+  #vector,
+  #vector-analyse,
+  #vector-optimalisatie {
+    display: inline;
+    float: left;
+  }
+  #vector {margin: 5% 5% 20% 0%;}
+  #vector-analyse {margin: 2% 5% 20% -2%;}
+  #vector-optimalisatie {margin: 5.5% 5% 20% 0%;}
+} /* END REGULAR | MIN 992 */
+
+/* --> START REGULAR STYLING | MIN 1200 <-- */
+@media screen and (min-width: 1200px) {
+  #related-content h3 {font-size: 1.6em;}
+} /* END REGULAR | MIN 1200 */
+
+/* START OVER-ONS STYLING */
+#over-ons-content h2 {font-size: 1.9em;}
+#over-ons-content p {font-size: 1.3em;}
+#second-content {margin-top: 8%;}
+
+/* OVER ONS | MIN 600 */
+@media screen and (min-width: 600px) {
+  #over-ons-content h2 {font-size: 2.1em;}
+} /* END OVER ONS | MIN 600 */
+
+/* OVER ONS | MIN 768 */
+@media screen and (min-width: 768px) {
+  #over-ons-content p {font-size: 1.35em;}
+  #over-ons-content h2 {font-size: 2.2em;}
+} /* END OVER ONS | MIN 768 */
+
+/* OVER ONS | MIN 992 */
+@media screen and (min-width: 992px) {
+  #over-ons-content p {font-size: 1.4em;}
+  #over-ons-content h2 {font-size: 2.5em;}
+} /* END OVER ONS | MIN 992 */
+
+/* OVER ONS | MIN 1200 */
+@media screen and (min-width: 1200px) {
+  #over-ons-content p {font-size: 1.43em;}
+  #over-ons-content h2 {font-size: 2.65em;}
+} /* END OVER ONS | MIN 1200 */
+
+/* ---------> BACKGROUND BAR STYLING <----------- */
+#background-bar {
+  background-image: url(images/strook-bar.jpg);
+  background-size: contain;
+  overflow: hidden;
+  clear: both;
+}
+#line-chart {
+  margin-bottom: -8px;
+  margin-right: -20px;
+}
+.pull {margin-left: -20px;}
+
+/* ---------> PRODUCT CONTENT STYLING <----------- */
+#products-content {margin: 15% 0% 23%;}
+#products-content .textblock {margin: 0% 10% 16%;}
+#products-content h3 {font-size: 1.4em;}
+.textblock a {
+  padding: 0.7em 3.6em;
+  border: 0.2em solid;
+  font-size: 1.1em;
+  color: black;
+}
+.textblock a:hover {color: grey;}
+#product-vector {margin-bottom: -3px;}
+#product-vector-web {
+  margin-bottom: -6px;
+  margin-left: 1.5%;
+}
+#product-vector:hover,
+#product-vector-web:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+/* --> START PRODUCT STYLING | MIN 600 <-- */
+@media screen and (min-width: 600px) {
+  #products-content {margin: 13% 0% 18%;}
+  #products-content h3 {font-size: 1.5em}
+  #products-content .textblock {margin: 0% 15% 12%;}
+  .textblock a {font-size: 1.15em;}
+  .btn {margin-top: 7%;}
+} /* END PRODUCT | MIN 600 */
+
+/* --> START PRODUCT STYLING | MIN 768 <-- */
+@media screen and (min-width: 768px) {
+  #products-content {
+    margin: 8% 0% 6%;
+    overflow: hidden; 
+  }
+  #products-content .textblock {
+    margin-right: 12%;
+    margin-left: 12%;
+  }
+  .btn {margin-top: 10%;}
+  .textblock a {font-size: 1.12em;}
+  #product-vector-web {
+    margin-top: 5px;
+    margin-left: 0.5%;
+  }
+} /* END PRODUCT | MIN 768 */
+
+/* --> START PRODUCT STYLING | MIN 992 <-- */
+@media screen and (min-width: 992px) {
+  #products-content {margin: 7.5% 0% 5%;}
+  #products-content h3{font-size: 1.55em}
+  .textblock a {font-size: 1.15em;}
+  #products-content .textblock {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  .btn {margin-top: 9%;}
+} /* END PRODUCT | MIN 992 */
+@media screen and (min-width: 1200px) {
+  #products-content {margin: 7% 0% 4%;}
+  #products-content h3{font-size: 1.7em}
+  #products-content .textblock {
+    margin-right: 14%;
+    margin-left: 14%;
+  }
+  .textblock a {font-size: 1.2em;}
+  .btn {margin-top: 8%;}
+} /* END PRODUCT | MIN 992 */
+
+/* ---------> FOOTER STYLING <----------- */
+#footer {
+  text-align: center;
+  background-color: #191f2a;
+  overflow: hidden;
+  color: white;
+}
+#footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#footer-nav {margin-top: 10%;}
+#footer h3,
+#footer h4,
+#footer h5 {
+  text-decoration: underline;
+  font-size: 1.2em;
+  margin-top: 2.4em;
+  margin-bottom: 0.9em;
+}
+.under-nav {
+  line-height: 200%;
+  font-size: 1.2em;
+}
+#footer address {
+  font-size: 1.1em;
+  line-height: 175%;
+}
+#copy-nav {
+  margin-bottom: 1em;
+  margin-top: 4em;
+  font-size: 0.9em;
+  width: 100%;
+}
+#copy-nav ul{display: inline;}
+#copy-nav li,
+#copyright {
+  display: inline;
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+}
+#footer a {color: white;}
+#footer a:hover {color: grey;}
+
+/* --> START FOOTER STYLING | MIN 600 <-- */
+@media screen and (min-width: 600px) {
+  #footer-nav {margin-top: 7%;}
+  #copy-nav {font-size: 0.95em;}
+} /* END FOOTER | MIN 768 */
+
+/* --> START FOOTER STYLING | MIN 768 <-- */
+@media screen and (min-width: 768px) {
+  #footer {
+    clear: both;
+    text-align: left;
+  }
+  .footer-col {
+    overflow: auto;
+    margin-left: 6%;
+  }
+  #footer-nav{margin-top: 0%;}
+  #footer h3,
+  #footer h4,
+  #footer h5,
+  .under-nav {
+    font-size: 1.14em;
+  }
+  #copy-nav {
+    float: left;
+    font-size: 1em;
+    margin-left: 5%;
+  }
+  #copy-nav li,
+  #copyright {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+} /* END FOOTER | MIN 768 */
+
+@media screen and (min-width: 992px) {
+  #footer h3,
+  #footer h4,
+  #footer h5,
+  .under-nav {
+    font-size: 1.15em;
+  }
+} /* END FOOTER | MIN 992 */
+
+/* --> START FOOTER STYLING | MIN 1200 <-- */
+@media screen and (min-width: 1200px) {
+  #footer h3,
+  #footer h4,
+  #footer h5,
+  .under-nav {
+    font-size: 1.17em;
+  }
+  #copy-nav {font-size: 1.05em;}
+} /* END FOOTER | MIN 1200 */
+
+/* ---------> EXTRA CONTENT STYLING <----------- */
+#extra-content {margin-top: -3%;}
+#extra-content .textblock {margin: 0% 6% 4%;}
+#extra-content h3 {font-size: 1.6em;}
+#extra-content h4 {margin-bottom: 5%;}
+#button a {
+  padding: 0.9em 3.6em;
+  border: 0.2em solid;
+  color: black;
+  font-size: 1.1em;
+}
+#button a:hover {color: grey;}
+#button {
+  margin-top: 13%;
+  margin-bottom: 20%;
+}
+/* --> START EXTRA STYLING | MIN 600 <-- */
+@media screen and (min-width: 600px) {
+  #extra-content h4 {margin-bottom: 4%;}
+  #button a {font-size: 1.12em;}
+  #button {
+    margin-top: 10%;
+    margin-bottom: 16%;
+  }
+} /* END EXTRA| MIN 600 */
+
+/* --> START EXTRA STYLING | MIN 768 <-- */
+@media screen and (min-width: 768px) {
+  #extra-content {
+    margin-top: -4%;
+    margin-bottom: -1%;
+    overflow: auto;
+}
+  #extra-content .textblock {margin: 0% 20% 3%;}
+  #button a {font-size: 1.18em;}
+  #button {
+    margin-top: 10%;
+    margin-bottom: 14%;
+  }
+} /* END EXTRA| MIN 768 */
+
+/* --> START EXTRA STYLING | MIN 992 <-- */
+@media screen and (min-width: 992px) {
+  #extra-content .textblock {margin: 0% 15% 2%;}
+  #extra-content h4 {margin-bottom: 4%;}
+  #button a {font-size: 1.2em;}
+  #button {
+    margin-top: 8%;
+    margin-bottom: 12%;
+  }
+} /* END EXTRA| MIN 992 */
+
+/* --> START EXTRA STYLING | MIN 1200 <-- */  
+@media screen and (min-width: 1200px) {
+  #extra-content h4 {margin-bottom: 4%;}
+  #button a {font-size: 1.23em;}
+  #button {
+    margin-top: -2%;
+    margin-bottom: 10%;
+  }
+} /* END EXTRA| MIN 1200 */
+
+/* --> START DATA VISUALISATIE STYLING <-- */  
+#canvas-holder-one {
+  margin-bottom: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#canvas-holder-two{
+  margin-right: 12%; 
+  margin-left: 9%;
+}
+/* VISUALISATIE | MIN 600 */
+@media screen and (min-width: 600px) {
+  #canvas-holder-one {
+    margin-bottom: 8%;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+  #canvas-holder-two{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+} /* END VISUALISATIE| MIN 600 */
+
+/* VISUALISATIE | MIN 768 */
+@media screen and (min-width: 768px) {
+  #canvas-holder-one {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #canvas-holder-two {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #canvas-holder-data-visualisatie {margin-right: 9%;}
+} /* VISUALISATIE | MIN 768 */
+
+/* VISUALISATIE | MIN 992 */
+@media screen and (min-width: 992px) {
+  #canvas-holder-one {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  #canvas-holder-two {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+} /* END VISUALISATIE | MIN 992 */
+
+/* VISUALISATIE | MIN 1200 */
+@media screen and (min-width: 1200px) {
+  #canvas-holder-one {
+    margin-left: 13%;
+    margin-right: 13%;
+  }
+  #canvas-holder-two {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+} /* END VISUALISATIE | MIN 1200 */
+
+/* --> START WEB ANALYSE STYLING <-- */  
+#canvas-holder-web-analyse {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* ANALYSE| MIN 600 */
+@media screen and (min-width:600px) {
+  #canvas-holder-web-analyse {
+    margin-left: 10%;
+    margin-right: 10%; 
+  }
+} /* END WEB ANALYSE | MIN 600 */
+
+/* ANALYSE | MIN 768 */
+@media screen and (min-width:768px) {
+  #canvas-holder-web-analyse {
+    margin-left: 20%;
+    margin-right: 20%; 
+  }
+} /* END WEB ANALYSE | MIN 768 */
+
+/* --> START WEB OPTIMALISATIE STYLING <-- */  
+#line-chart-web-opt {display: none;}
+#under-extra-content h4 {font-size: 0.98em;}
+.under-textblock {
+  padding-bottom: 1%;
+  margin-top: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+  font-size: 1.3em;
+}
+/* OPTIMALISATIE | MIN 600 */
+@media screen and (min-width: 600px) {
+  #under-extra-content {
+    margin-top: -1%;
+    overflow: hidden;
+  }
+  .under-textblock {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+} /* END OPTIMALISATIE | MIN 600 */
+
+/* OPTIMALISATE | MIN 768 */
+@media screen and (min-width: 768px) {
+  #canvas-holder-web-opt {
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+  #line-chart-web-opt {display: block;}
+  #under-extra-content {margin-top: 6%; }
+  .under-textblock {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+} /* END OPTIMALISATIE | MIN 768 */
+
+/* OPTIMALISATE | MIN 992 */
+@media screen and (min-width: 992px) {
+  .under-textblock {font-size: 1.35em;}
+  #under-extra-content {margin-top: 6%; }
+} /* END OPTIMALISATIE | MIN 992 */
+
+/* OPTIMALISATE | MIN 1200 */
+@media screen and (min-width: 1200px) {
+  .under-textblock {
+    font-size: 1.39em;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #under-extra-content {margin-top: 5.5%; }
+}/* END OPTIMALISATIE | MIN 992 */
+
+/* --> START OVER ONS STYLING <-- */  
+#button-over-ons p {margin-bottom: 10%;}
+@media screen and (min-width: 768px) {
+  #btn-left {margin-left: 7%;}
+  #btn-right {margin-left: -11%;} 
+}
+@media screen and (min-width: 1200px) {
+  #btn-left {margin-left: 10%;}
+  #btn-right {margin-left: -18%;} 
+}
+
+/* ---------> START FORM STYLING <----------- */
+#content-address {
+  font-size: 1.2em;
+  margin-top: -11%;
+  margin-bottom: 7%;
+}
+#content-address a {
+  color: black;
+}
+textarea {max-width: 100%;}
+form {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+form #submit-button {
+  font-size: 1.45em;
+  padding: 0.8em 0em;
+  text-transform: uppercase;
+  background-color: #191f2a;
+  color: white;
+  border: 0.15em solid #c1c1c1;
+  border-radius: 0.2em;
+}
+
+form #submit-button:hover {
+  background-color: #fafafa;
+  color: #191f2a;
+  border-color: #adadad;
+}
+.form-header {font-size: 1.4em; }
+#submit-button {
+  width: 40%;
+  margin-bottom: 20%;
+}
+#naam,
+#mail {
+  width: 100%;
+  height: 25px;
+}
+
+@media screen and (min-width: 600px) {
+  #content-address {
+    margin-top: -5%;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #content-address {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  #submit-button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #content-address {
+    margin-bottom: 3%;
+  }
+  form {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #content-address {
+    margin-top: -5.5%;
+    margin-bottom: 3%;
+  }
+  form {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
