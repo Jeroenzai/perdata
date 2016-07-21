@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //Opvragen file-name van huigie bestand
 $file = "content.txt";
 $this_file = basename(__FILE__);
@@ -32,3 +32,5 @@ if ( $_POST && array_key_exists('new_contents', $_POST) ) {
     </form>
   </body>
 </html>
+
+change cahnge gagen
