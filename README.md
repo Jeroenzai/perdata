@@ -5,3 +5,4 @@
 * clean-up old css files
 * remove focus in contact page
 * add javascript navbar to all pages except homepage
+* add back-end PHP for contact page
