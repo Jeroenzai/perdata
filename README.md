@@ -1,9 +1,10 @@
-#website for a data science start-up
-
 ##For personal use only, do not copy please
 
-* replace useless id's with different names (as [same] unique key on different pages) to similair ones to improve readability and shrink in significantly
-* clean-up old css files
-* remove focus in contact page
-* add javascript navbar to all pages except homepage
-* add back-end PHP for contact page
+# om de website te bekijken 'clone' het geheel en open index.html 
+
+# notitties en verbeteringen voor de website:
+* herplaats overbodige, unnieke id's die dubbelop zijn en vervang voor een generale (vervang voor unieke key) id om leesbaarheid te verbeteren en code in te krimpen. 
+* schoon deze CSS bestanden op
+* Haal focus van contact pagina weg
+* Voeg JavaScript toe aan alle overige pagina's (niet index.html voor volledige responsiviteit op alle pagina's)
+* Voeg back-end toe via Python en SQL database (Django of Flask)
