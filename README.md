@@ -4,7 +4,7 @@
 
 ### ~ om de website te bekijken 'clone' het geheel en open index.html 
 
-### of zip en pak het bestand uit (let op het uitpakken, anders leest het de overige bestanden niet)
+### ~meth.2: download als zip en pak het bestand uit (let op het uitpakken, anders leest het de overige bestanden niet)
 
 ### notitties en verbeteringen voor de website:
 * herplaats overbodige, unnieke id's die dubbelop zijn en vervang voor een generale (vervang voor unieke key) id om leesbaarheid te verbeteren en code in te krimpen. 
